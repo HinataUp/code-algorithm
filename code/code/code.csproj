@@ -9,7 +9,6 @@
 
     <ItemGroup>
       <Folder Include="algorithm" />
-      <Folder Include="c_sharp_learn" />
       <Folder Include="data_structure" />
     </ItemGroup>
 
