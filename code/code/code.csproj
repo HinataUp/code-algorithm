@@ -8,8 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="algorithm" />
-      <Folder Include="data_structure" />
+      <Folder Include="c_sharp_code" />
+      <Folder Include="leetcode" />
     </ItemGroup>
+    
 
 </Project>

@@ -1,30 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+namespace test;
 
-public class Test {
-    public static int Factorial(int number) {
-        Factorial(number - 1);
-        // if number equals 1 or 0 we return 1
-        if (number == 1 || number == 0) {
-            return 1;
-        } else {
-            //recursively calling the function if n is other then 1 or 0
-            return number;
-        }
-    }
+class Program {
+    // 定义一个委托，用于处理字符串
+    delegate string StringHandler(string str);
 
-    // static void Main() {
-    //     Console.WriteLine("Factorial of 4 is: {0}", Factorial(4));
-    // }
-    static void Main(string[] args) {
-        int b = 0;
-        try {
-           int a =  1 / b;
-        } catch (ArithmeticException ex) {
-            Console.WriteLine("Error: " + ex);
-        } finally {
-            Console.WriteLine("Finished!");
+    static void Main() {
+        string[] arr = { "hello", "world", "csharp" };
+
+        // 创建一个委托实例，指向ToUpper方法
+        StringHandler handler = new StringHandler(str => str.ToUpper());
+
+        // 使用委托处理字符串数组
+        foreach (string str in arr) {
+            string result = handler(str);
+            Console.WriteLine(result);
         }
-        
     }
 }
