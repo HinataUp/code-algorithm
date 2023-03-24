@@ -8,7 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="c_sharp_code" />
+      <Folder Include="c_sharp_code\graph" />
+      <Folder Include="c_sharp_code\hash" />
+      <Folder Include="c_sharp_code\list" />
+      <Folder Include="c_sharp_code\tree" />
       <Folder Include="leetcode" />
     </ItemGroup>
     
