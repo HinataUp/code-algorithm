@@ -1,38 +1,30 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using System.Security.Cryptography;
+using System.Text;
 
-namespace test;
+namespace code;
 
-class Program {
-    public static void Main() {
-        p kiki = new p("kiki", 11, null) {
-        };
-        p mac = new p("mac", 10, kiki) {
-        };
-        mac.name = "mac";
-        Console.WriteLine(mac.friend.name + mac.friend.age);
-        return;
+class Test {
+    public int a = 1;
+    public Test2 b = new Test2();
+
+    // 保护类型 包裹一下
+    public Test Clone() {
+        // return (test)base.MemberwiseClone();
+        return MemberwiseClone() as Test;
     }
 }
 
-class p {
-    public string name;
-    public int age;
-    public p friend;
+class Test2 {
+    public int a2 = 2;
+}
 
-    public string Name {
-        get;
-        set;
-    }
-
-    public p(string name, int age, p friend) {
-        this.name = name;
-        this.age = age;
-        this.friend = friend;
-    }
-
-    ~p() {
-        Console.WriteLine("bye");
+internal static class My {
+    public static void Main() {
+        StringBuilder sb = new StringBuilder("hello world");
+        sb.AppendFormat(" {0}{1}","hello","world");
+        
+        Console.WriteLine(sb.ToString());
+        return;
     }
 }
